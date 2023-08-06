@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="plante.css
+    "
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="nav-header">
+        <img src="../image/logo.svg" alt="" class="logoplante" />
+        <ul class="navplante">
+          <li><a href="#" class="navLinkPlante">Departements</a></li>
+          <li><a href="#" class="navLinkPlante">Service</a></li>
+          <li><a href="#" class="navLinkPlante">Contact</a></li>
+          <li class="shopping">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="quantity">0</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main -->
+    <main>
+      <section class="searchCard">
+        <input class="search__input" type="text" placeholder="Search Pflazen" />
+        <i class="fa-solid fa-plus" onclick="openAddArticle()"></i>
+      </section>
+      <section class="list"></section>
+    </main>
+    <!-- footer -->
+    <footer>
+      <!-- footer-desc -->
+      <div class="footer-desc">
+        <!-- Quick-Contact -->
+        <div class="Quick-Contact">
+          <h2>Quick-Contact</h2>
+          <ul class="Quick-Contact-ul">
+            <li class="Quick-Contact-list">
+              <i class="fa-solid fa-location-dot fa-lg"></i>
+              <p>jareb codi</p>
+            </li>
+            <li class="Quick-Contact-list">
+              <i class="fa-solid fa-envelope fa-lg"></i>
+              <p>jareb.codi@gmail.com</p>
+            </li>
+            <li class="Quick-Contact-list">
+              <i class="fa-solid fa-phone fa-lg"></i>
+              <p>+216 53 756 689</p>
+            </li>
+          </ul>
+        </div>
+        <!-- Departements -->
+        <div class="Departements">
+          <h2>Departements</h2>
+          <ul class="Departement-list">
+            <li><a href="#">service apres vente</a></li>
+            <li><a href="#">livraison</a></li>
+            <li><a href="#">service+</a></li>
+            <li><a href="#">service aide</a></li>
+          </ul>
+        </div>
+        <!-- services -->
+        <div class="services">
+          <h2 class="">Services</h2>
+          <ul class="service-list">
+            <li><a href="#">service apres vente</a></li>
+            <li><a href="#">livraison</a></li>
+            <li><a href="#">service+</a></li>
+            <li><a href="#">service aide</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- contact-us -->
+      <div class="contact-us">
+        <h2>Contact us</h2>
+        <form action="" class="contact-form">
+          <input type="text" placeholder="your name" />
+          <input type="text" placeholder="your lastname" />
+          <input type="text" placeholder="your phone" /><textarea
+            name=""
+            id=""
+            cols="10"
+            rows="5"
+            placeholder="how can we help you"
+          ></textarea>
+        </form>
+      </div>
+      <!-- Social-media -->
+      <ul class="Social-media">
+        <li class="Social-media-list">
+          <a
+            href="https://www.instagram.com/jareb_codi/?hl=fr"
+            class="footer-link"
+            ><i class="fa-brands fa-instagram fa-2xl"></i
+          ></a>
+        </li>
+        <li class="Social-media-list">
+          <a href="#" class="footer-link"
+            ><i class="fa-brands fa-github fa-2xl"></i
+          ></a>
+        </li>
+        <li class="Social-media-list">
+          <a href="#" class="footer-link"
+            ><i class="fa-brands fa-linkedin fa-2xl"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <!-- jjjjjjjjjjj -->
+    <nav class="nav-Card-Shop">
+      <div class="nav-Card-Shop-head">
+        <h1>Panier</h1>
+        <div class="close"><i class="fa-solid fa-xmark fa-xl"></i></div>
+      </div>
+      <ul class="listCard"></ul>
+      <div class="totalProducts">
+        <div class="Totalp">Total</div>
+        <div class="total">0 dt</div>
+      </div>
+    </nav>
+    <!-- ----------- ADD CARD --------- -->
+    <article class="addArticle">
+      <div class="addArticleTop">
+        <h2>ADD New Article</h2>
+        <div class="closeAdd" onclick="closeAddArticle()">
+          <i class="fa-solid fa-xmark fa-xl"></i>
+        </div>
+      </div>
+
+      <form>
+        <input type="text" id="articleName" placeholder="article name" />
+        <p class="articleNameError"></p>
+        <input type="text" id="articlePhoto" placeholder="article photo" />
+        <p class="articlePhotoError"></p>
+        <input
+          type="number"
+          id="articlePrice"
+          placeholder="article Price (50,400 dt)"
+        />
+        <p class="articlePriceError"></p>
+        <div class="button-addArticle">
+          <div class="button-addArticle-submit" onclick="articleValidation()  ">
+            Add
+          </div>
+          <input type="reset" value="reset" class="button-addArticle-reset" />
+        </div>
+      </form>
+    </article>
+
+    <script src="plante.js"></script>
+  </body>
+</html>
+
+<!-- <article class="Card">
+  <div class="card-tumb">
+    <img src="../image/p1.png" alt="" />
+  </div>
+  <div class="card-details">
+    <span class="product-catagory">POPULAR HOUSE PLANT</span>
+    <h2>CLASSIC PEACE LILY</h2>
+   
+    <div class="product-bottom-details">
+      <div class=c">$230.99</div>
+      <div class="product-links">
+        <a href=""> <i class="fas fa-edit"></i></a>
+        <a href=""> <i class="fa-solid fa-trash"></i></a>
+        <a href=""><i class="fa fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </div>
+</article> -->
